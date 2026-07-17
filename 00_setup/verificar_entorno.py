@@ -8,7 +8,7 @@ el script termina con código de salida 1.
 Uso:  python 00_setup/verificar_entorno.py
 """
 
-import importlib
+import importlib.util
 import os
 import subprocess
 import sys
@@ -131,6 +131,10 @@ def check_escritura():
 @chequeo("API externa (BCE — Euríbor 12M)")
 def check_api():
     import requests
+    import truststore
+    # En esta máquina hay inspección TLS (antivirus/proxy): Python debe confiar
+    # en el almacén de certificados de Windows, no solo en el paquete certifi
+    truststore.inject_into_ssl()
     respuesta = requests.get(API_URL, timeout=30)
     respuesta.raise_for_status()
     series = respuesta.json()["dataSets"][0]["series"]
@@ -145,7 +149,7 @@ def check_git():
     valores = []
     for clave in ("user.name", "user.email"):
         salida = subprocess.run(["git", "config", "--get", clave],
-                                capture_output=True, text=True)
+                                capture_output=True, text=True, encoding="utf-8")
         if salida.returncode != 0 or not salida.stdout.strip():
             raise RuntimeError(f'falta {clave} — git config --global {clave} "..."')
         valores.append(salida.stdout.strip())

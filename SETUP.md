@@ -35,20 +35,32 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-### Git (instalador oficial de git-for-windows, GitHub Releases)
+### Git 2.55 (instalador oficial de git-for-windows, GitHub Releases)
 
 ```powershell
 # La URL exacta se obtiene de https://api.github.com/repos/git-for-windows/git/releases/latest
-Start-Process .\Git-<version>-64-bit.exe -ArgumentList "/VERYSILENT","/NORESTART","/CURRENTUSER" -Wait
+Start-Process .\Git-2.55.0.3-64-bit.exe -ArgumentList "/VERYSILENT","/NORESTART","/NOCANCEL","/CURRENTUSER" -Wait
 git config --global user.name  "Rosmary González Isasa"
 git config --global user.email "isasamery@gmail.com"
+git config --global init.defaultBranch main
 ```
 
-*(estado: en curso — se actualiza al terminar)*
+Quedó en `C:\Program Files\Git\cmd` (el instalador eligió instalación de sistema pese
+al flag `/CURRENTUSER`). Verificado: `git --version` → `git version 2.55.0.windows.3`.
 
-### PostgreSQL 16 (nativo, decisión de FICHA.md §7) + pgAdmin 4
+### PostgreSQL 16.12 (nativo, decisión de FICHA.md §7) + pgAdmin 4
 
-*(pendiente — se documenta al instalar)*
+Instalador oficial de EDB, en modo desatendido (pide UAC). pgAdmin 4 viene incluido;
+se excluyó solo StackBuilder:
+
+```powershell
+# URL vigente detectada por sondeo: get.enterprisedb.com/postgresql/postgresql-16.12-1-windows-x64.exe
+Start-Process .\postgresql-16.12-1-windows-x64.exe -ArgumentList "--mode","unattended","--unattendedmodeui","none","--superpassword","<LA_DE_TU_.env>","--serverport","5432","--disable-components","stackbuilder" -Verb RunAs -Wait
+& "C:\Program Files\PostgreSQL\16\bin\psql.exe" -U postgres -h localhost -c "CREATE DATABASE finance_analytics;"
+```
+
+Servicio: `postgresql-x64-16` (arranca solo con Windows). Contraseña del superusuario:
+en `.env` (no versionado). Verificado: conexión y permisos de escritura desde Python ✓.
 
 ## Errores encontrados y su solución
 
@@ -57,3 +69,5 @@ git config --global user.email "isasamery@gmail.com"
 | `python` en la terminal "responde" pero pide instalar desde la Store | Es el **alias stub** de Microsoft Store, no un Python real | Desactivar el alias o instalar Python de verdad; verificar con `Get-Command python` que apunte a `...\Programs\Python\...` |
 | `curl.exe` a APIs HTTPS falla con exit code 35 | Windows PowerShell 5.1 negocia TLS viejo | `[Net.ServicePointManager]::SecurityProtocol = Tls12` antes de llamar; en Python `requests` no hace falta |
 | `winget install` se cuelga sin salida en terminal no interactiva | winget espera algo que no puede mostrar (elevación/acuerdos) | Descargar el instalador oficial y correrlo con flags silenciosos (`/quiet`, `/VERYSILENT`) |
+| La API del BCE responde en PowerShell pero en Python da `CERTIFICATE_VERIFY_FAILED` | Hay inspección TLS (antivirus/proxy): PowerShell confía en los certificados de Windows, Python solo en `certifi` | `pip install truststore` + `truststore.inject_into_ssl()` antes de las peticiones (es lo que usa pip) |
+| Acentos rotos ("GonzÃ¡lez") al capturar salida de git desde Python | git emite UTF-8, `subprocess` decodifica con cp1252 | `subprocess.run(..., encoding="utf-8")` |

@@ -1,7 +1,7 @@
 # Progreso — Finance Analytics España
 
 ## Estado actual
-**Fase:** 0.5 (Entorno) · **Paso:** 1 de 4 (instalación de herramientas) · **Última sesión:** 2026-07-17
+**Fase:** 0.5 (Entorno) ✅ COMPLETA — lista para arrancar la Fase 1 (ETL) · **Última sesión:** 2026-07-17
 
 ## Bitácora
 
@@ -21,10 +21,16 @@
 - [x] Paso 1a — Inventario de la máquina (2026-07-17):
   - ✅ Power BI Desktop v2.155 (Microsoft Store) · ✅ VS Code
   - ❌ Python (solo el alias falso de la Store) · ❌ Git · ❌ Docker/PostgreSQL · ❌ Quarto (opcional, Fase 6)
-- [ ] Paso 1b — Instalar Python 3.12, Git y la base de datos  ← ACÁ VAMOS
-- [ ] Paso 2 — Crear estructura del proyecto + venv + requirements
-- [ ] Paso 3 — Levantar PostgreSQL y probar conexión
-- [ ] Paso 4 — `verificar_entorno.py` en verde + repo Git con primer commit + SETUP.md
+- [x] Paso 1b — Python 3.12.10 ✓ (instalador directo; winget se colgaba, ver SETUP.md) ·
+  Git 2.55 ✓ (identidad configurada) · PostgreSQL 16.12 descargando (347 MB)  ← ACÁ VAMOS
+- [x] Paso 2 — Estructura bootstrap creada (Anexo B) · `.venv` creado ·
+  `pip install -r requirements.txt` en curso · repo Git iniciado, primer commit `8f55188`
+- [x] Paso 3 — PostgreSQL 16.12 instalado (servicio `postgresql-x64-16` corriendo), base
+  `finance_analytics` creada (UTF8, locale español), `.env` generado con contraseña aleatoria
+- [x] Paso 4 — **`verificar_entorno.py` → 8/8 EN VERDE** (2026-07-17). Trampas resueltas y
+  documentadas en SETUP.md: inspección TLS (→ truststore), winget colgado (→ instalador directo)
+- [ ] Pendiente (no bloquea la Fase 1): crear el repo en GitHub y hacer push · confirmar que
+  Power BI Desktop abre bien
 
 ## Decisiones técnicas anotadas
 - En Windows PowerShell 5.1, las APIs HTTPS exigen forzar TLS 1.2

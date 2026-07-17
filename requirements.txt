@@ -14,3 +14,4 @@ scipy
 scikit-learn
 statsmodels
 prophet
+truststore  # confiar en los certificados de Windows: esta máquina tiene inspección TLS
