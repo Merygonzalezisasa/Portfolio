@@ -1,0 +1,16 @@
+# Secretos — nunca al repo
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Datos pesados y logs
+logs/*.log
+data/raw/fact_*.csv
+data/processed/
+
+# Power BI temporales
+*.pbix.tmp

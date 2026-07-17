@@ -1,0 +1,16 @@
+# Finance Analytics España — dependencias del proyecto
+# Módulos elegidos en FICHA.md §5: calidad, Pareto, RFM+KMeans, cohortes, forecast, correlación.
+pandas
+numpy
+faker
+requests
+python-dotenv
+sqlalchemy
+psycopg2-binary
+jupyter
+matplotlib
+seaborn
+scipy
+scikit-learn
+statsmodels
+prophet

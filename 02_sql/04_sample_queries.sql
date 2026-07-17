@@ -1,0 +1,1 @@
+-- TODO Fase 2 (Parte 5): 6-10 consultas comentadas que responden las preguntas de FICHA.md §4.

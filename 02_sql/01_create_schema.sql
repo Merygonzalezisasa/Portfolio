@@ -1,0 +1,1 @@
+-- TODO Fase 2 (Parte 5): esquema estrella de FICHA.md §3 con PKs, FKs, índices y comentarios.

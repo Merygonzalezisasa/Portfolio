@@ -1,0 +1,2 @@
+-- TODO Fase 2 (Parte 5): v_facturas_enriquecida, v_kpis_diarios, v_rfm_pago,
+-- v_pareto_clientes, v_aging_dso.
