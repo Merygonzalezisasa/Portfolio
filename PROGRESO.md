@@ -1,7 +1,8 @@
 # Progreso — Finance Analytics España
 
 ## Estado actual
-**Fase:** 1 (ETL) · **Paso:** 0 de 4 (por arrancar) · **Última sesión:** 2026-07-17
+**Fase:** 2 (SQL: vistas + stored procedures — el esquema ya se creó en la Fase 1) ·
+**Última sesión:** 2026-07-20
 **Repo:** https://github.com/Merygonzalezisasa/Portfolio
 
 ## Bitácora
@@ -53,10 +54,15 @@
 - [x] Paso 3 — Carga a Postgres (`load_to_postgres.py`), con upsert real
   (`INSERT ... ON CONFLICT DO UPDATE`, no `INSERT` ciego). Adelantamos
   `02_sql/01_create_schema.sql` (esquema estrella con PKs/FKs/índices/comentarios) porque
-  la carga lo necesita como prerrequisito técnico. Verificado: carga completa 912/120/25/
-  1.277/15.000 filas (CSV = tabla en las 5); segunda corrida da los mismos conteos
-  (idempotente); `--tabla dim_contexto_macro` recarga solo esa tabla. 0 FKs huérfanas.
-- [ ] Paso 4 — Verificación de carga (verificar_carga.py)  ← ACÁ VAMOS
+  la carga lo necesita como prerrequisito técnico. Verificado por mí y por Rosmary (mismo
+  resultado, dos corridas): carga completa 912/120/25/1.277/15.000 filas (CSV = tabla en
+  las 5); segunda corrida da los mismos conteos (idempotente); `--tabla dim_contexto_macro`
+  recarga solo esa tabla. 0 FKs huérfanas.
+- [x] Paso 4 — Verificación de carga (`verificar_carga.py`), 4 chequeos: conteos CSV vs
+  tabla, nulos en claves, FKs huérfanas, rangos imposibles (importes, fechas, dso_pactado).
+  Verificado: 4/4 en verde → "CARGA VERIFICADA. Podés avanzar a la Fase 2."
+
+## Fase 1 — CERRADA ✅ (2026-07-20)
 
 ## Notas técnicas importantes
 - **Al medir el retraso de pago, usar siempre `fecha_cobro − fecha_vencimiento` (retraso sobre
