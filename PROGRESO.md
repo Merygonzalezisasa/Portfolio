@@ -1,7 +1,8 @@
 # Progreso — Finance Analytics España
 
 ## Estado actual
-**Fase:** 0.5 (Entorno) ✅ COMPLETA — lista para arrancar la Fase 1 (ETL) · **Última sesión:** 2026-07-17
+**Fase:** 1 (ETL) · **Paso:** 0 de 4 (por arrancar) · **Última sesión:** 2026-07-17
+**Repo:** https://github.com/Merygonzalezisasa/Portfolio
 
 ## Bitácora
 
@@ -29,8 +30,10 @@
   `finance_analytics` creada (UTF8, locale español), `.env` generado con contraseña aleatoria
 - [x] Paso 4 — **`verificar_entorno.py` → 8/8 EN VERDE** (2026-07-17). Trampas resueltas y
   documentadas en SETUP.md: inspección TLS (→ truststore), winget colgado (→ instalador directo)
-- [ ] Pendiente (no bloquea la Fase 1): crear el repo en GitHub y hacer push · confirmar que
-  Power BI Desktop abre bien
+- [x] Power BI Desktop abre correctamente (confirmado por Rosmary, 2026-07-17)
+- [x] Repo publicado: **github.com/Merygonzalezisasa/Portfolio** (rama `main`, 2 commits)
+
+## Fase 0.5 — CERRADA ✅ (2026-07-17)
 
 ## Decisiones técnicas anotadas
 - En Windows PowerShell 5.1, las APIs HTTPS exigen forzar TLS 1.2
