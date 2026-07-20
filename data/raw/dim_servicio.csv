@@ -1,0 +1,26 @@
+servicio_id,linea_servicio,servicio,tarifa_base,tipo_facturacion,indexado_ipc
+1,BI & Reporting,BI & Reporting — paquete 1,3607.87,recurrente,True
+2,BI & Reporting,BI & Reporting — paquete 2,2667.48,recurrente,True
+3,BI & Reporting,BI & Reporting — paquete 3,1703.28,recurrente,True
+4,BI & Reporting,BI & Reporting — paquete 4,3666.71,recurrente,True
+5,BI & Reporting,BI & Reporting — paquete 5,5817.0,recurrente,True
+6,Soporte de aplicaciones,Soporte de aplicaciones — paquete 1,2235.54,recurrente,True
+7,Soporte de aplicaciones,Soporte de aplicaciones — paquete 2,1890.11,recurrente,True
+8,Soporte de aplicaciones,Soporte de aplicaciones — paquete 3,1043.52,recurrente,True
+9,Soporte de aplicaciones,Soporte de aplicaciones — paquete 4,1355.36,recurrente,True
+10,Soporte de aplicaciones,Soporte de aplicaciones — paquete 5,1448.5,recurrente,True
+11,Outsourcing financiero,Outsourcing financiero — paquete 1,6588.82,recurrente,True
+12,Outsourcing financiero,Outsourcing financiero — paquete 2,7260.26,recurrente,True
+13,Outsourcing financiero,Outsourcing financiero — paquete 3,7409.85,recurrente,True
+14,Outsourcing financiero,Outsourcing financiero — paquete 4,7907.41,recurrente,True
+15,Outsourcing financiero,Outsourcing financiero — paquete 5,7894.2,recurrente,True
+16,Consultoría,Consultoría — paquete 1,14435.99,proyecto,False
+17,Consultoría,Consultoría — paquete 2,3861.87,proyecto,False
+18,Consultoría,Consultoría — paquete 3,4653.52,proyecto,False
+19,Consultoría,Consultoría — paquete 4,6653.6,proyecto,False
+20,Consultoría,Consultoría — paquete 5,9634.78,proyecto,False
+21,Formación,Formación — paquete 1,693.96,proyecto,False
+22,Formación,Formación — paquete 2,2191.59,proyecto,False
+23,Formación,Formación — paquete 3,1733.51,proyecto,False
+24,Formación,Formación — paquete 4,1584.73,proyecto,False
+25,Formación,Formación — paquete 5,830.62,proyecto,False

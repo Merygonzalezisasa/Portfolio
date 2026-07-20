@@ -1,0 +1,121 @@
+cliente_id,nombre,sector,segmento,comunidad_autonoma,fecha_alta,canal_captacion,dso_pactado,sensibilidad_euribor
+1,Banca Privada OLMJ S.L.N.E,seguros,pyme,Andalucía,2021-05-14,partner,60,0.97
+2,Suministros BL S.Coop.,construcción,pyme,Andalucía,2022-07-28,licitación pública,30,0.8
+3,Grupo Rivas S.A.T.,retail,pyme,Andalucía,2021-01-18,licitación pública,30,1.13
+4,Alimentación Cuervo y asociados S.Com.,retail,pyme,Canarias,2021-09-20,inbound web,30,0.89
+5,Fábrica Navarro S.A.,seguros,corporate,Galicia,2022-01-19,comercial directo,60,0.3
+6,Caballero y Palomar S.L.L.,inmobiliario,pyme,País Vasco,2021-04-17,referido,60,0.98
+7,Banco Segovia & Asociados S.L.N.E,sector público,pyme,Canarias,2022-06-16,referido,30,1.03
+8,Bermúdez y Marcos S.L.L.,construcción,pyme,Castilla y León,2021-11-03,referido,30,0.8
+9,Fernandez & Asociados S.A.,seguros,corporate,Canarias,2023-02-24,partner,60,0.2
+10,Instalaciones Española S.L.L.,banca,pyme,Canarias,2021-02-11,licitación pública,30,1.11
+11,Restauración XRI S.Com.,retail,pyme,Madrid,2022-02-18,inbound web,30,1.23
+12,Comercializadora Donoso & Asociados S.A.,ticketing,pyme,Comunidad Valenciana,2021-08-28,partner,60,1.18
+13,Lerma y Gimenez S.L.,construcción,pyme,Castilla-La Mancha,2022-08-15,inbound web,30,1.19
+14,Grupo Antón S.L.,inmobiliario,pyme,Aragón,2021-05-27,comercial directo,30,0.88
+15,Leal y Batalla S.A.T.,ticketing,pyme,Cataluña,2023-10-12,licitación pública,30,1.31
+16,Garcia y asociados S.Com.,banca,corporate,Comunidad Valenciana,2023-08-30,inbound web,60,0.14
+17,Eric Landa Chaparro S.A.U,construcción,pyme,Galicia,2022-06-25,referido,60,0.99
+18,Suministros Pujol y asociados S.A.T.,peajes,corporate,Castilla-La Mancha,2021-10-22,licitación pública,60,0.23
+19,Transportes Bou S.L.,retail,pyme,Cataluña,2021-07-29,comercial directo,30,0.92
+20,Despacho IJFU S.Coop.,banca,pyme,Castilla y León,2022-09-07,partner,30,1.06
+21,Benigna Iglesias Alberdi S.L.,retail,pyme,Andalucía,2022-01-20,comercial directo,30,1.26
+22,Inmobiliaria RPIA S.L.,seguros,pyme,Andalucía,2022-05-06,licitación pública,60,1.4
+23,Farmaceútica Vera & Asociados S.L.N.E,retail,pyme,Galicia,2021-02-13,inbound web,30,1.43
+24,Finanzas Coronado y asociados S.L.,peajes,pyme,País Vasco,2022-01-15,licitación pública,30,1.05
+25,Hermanos Torres S.A.,inmobiliario,pyme,Castilla y León,2022-10-02,partner,60,1.07
+26,Meléndez & Asociados S.A.,seguros,corporate,Comunidad Valenciana,2021-02-04,partner,60,0.4
+27,Compañía ZDNN S.A.,banca,pyme,Aragón,2023-09-06,partner,30,0.88
+28,Carmela Dalmau Landa S.Coop.,construcción,corporate,Madrid,2021-01-18,partner,60,0.39
+29,Galán y Font S.L.,sector público,corporate,Aragón,2023-07-17,comercial directo,60,0.14
+30,Perea y Ríos S.L.N.E,ticketing,pyme,Madrid,2023-02-20,comercial directo,30,0.7
+31,Dionisio Huguet Gomila S.A.,seguros,pyme,Castilla-La Mancha,2021-07-16,comercial directo,30,0.66
+32,Grupo Giménez S.A.,construcción,pyme,Comunidad Valenciana,2021-10-20,referido,30,1.36
+33,Grupo Bauzà S.L.N.E,seguros,pyme,Comunidad Valenciana,2021-02-03,partner,30,0.65
+34,Belda & Asociados S.C.P,seguros,pyme,Madrid,2021-10-02,inbound web,30,0.85
+35,Iker Catalán Suárez S.A.U,construcción,pyme,Castilla-La Mancha,2022-02-03,inbound web,30,0.9
+36,Noemí Ramírez Falcón S.A.,ticketing,corporate,Cataluña,2022-12-18,partner,90,0.24
+37,Pablo y Roda S.Com.,inmobiliario,corporate,Castilla y León,2023-12-27,inbound web,60,0.35
+38,Familia Barrera S.Com.,ticketing,pyme,Castilla-La Mancha,2023-08-19,comercial directo,30,1.27
+39,Canales & Asociados S.A.,inmobiliario,corporate,Aragón,2023-02-09,referido,90,0.24
+40,Enrique Roca Español S.C.P,seguros,pyme,Castilla-La Mancha,2023-11-18,referido,60,1.34
+41,Comercializadora del Norte S.L.L.,seguros,pyme,Comunidad Valenciana,2022-06-24,licitación pública,30,1.37
+42,Comercial ZRYW S.L.L.,seguros,pyme,Castilla-La Mancha,2021-09-02,inbound web,30,0.94
+43,Soluciones Torralba S.Coop.,retail,pyme,Aragón,2021-02-11,inbound web,30,0.74
+44,Barral y Cózar S.Com.,construcción,pyme,Comunidad Valenciana,2022-07-14,inbound web,30,1.14
+45,Lara y Sanz S.C.P,seguros,pyme,Cataluña,2021-05-18,referido,30,0.71
+46,Fabián Falcó Martin S.A.T.,ticketing,pyme,Aragón,2021-01-17,inbound web,30,0.93
+47,Familia Mir S.A.,sector público,pyme,Cataluña,2021-06-04,partner,30,1.46
+48,Ani Criado Barberá S.L.N.E,sector público,corporate,Galicia,2022-08-10,referido,90,0.35
+49,Farmaceútica EJ S.A.U,banca,pyme,Andalucía,2023-01-10,referido,30,1.29
+50,Industrias EGVE S.Coop.,peajes,corporate,Cataluña,2021-01-26,licitación pública,90,0.4
+51,Fábrica Miralles & Asociados S.C.P,construcción,corporate,Castilla-La Mancha,2023-04-12,inbound web,60,0.3
+52,Inversiones Sebastián S.Com.,inmobiliario,corporate,Cataluña,2022-10-08,partner,60,0.3
+53,Alimentación GDF S.Coop.,sector público,pyme,Castilla y León,2023-10-12,inbound web,60,0.95
+54,Desarrollo Oller & Asociados S.L.N.E,construcción,pyme,Castilla y León,2021-08-15,partner,30,1.18
+55,López & Asociados S.Com.,sector público,pyme,Madrid,2022-01-20,partner,60,0.61
+56,Alimentación Marí & Asociados S.L.N.E,retail,pyme,Cataluña,2023-10-01,inbound web,60,0.79
+57,Infraestructuras Carlos S.L.N.E,ticketing,pyme,Castilla-La Mancha,2023-05-03,referido,60,1.07
+58,Inmobiliaria Luján S.Coop.,retail,pyme,Galicia,2022-05-03,licitación pública,60,0.75
+59,Frutos y asociados S.Coop.,inmobiliario,corporate,Cataluña,2022-05-20,licitación pública,90,0.16
+60,Comercial Bru y asociados S.L.L.,construcción,corporate,Canarias,2021-08-06,comercial directo,90,0.37
+61,Familia Múgica S.L.,ticketing,pyme,Andalucía,2023-03-16,referido,30,1.49
+62,Distribuciones Sala y asociados S.Coop.,banca,pyme,Madrid,2021-03-25,inbound web,30,1.1
+63,Comercializadora VCRE S.A.,retail,pyme,Canarias,2022-09-02,referido,30,1.36
+64,Banco Mendez S.Com.,construcción,pyme,Madrid,2021-07-15,licitación pública,30,1.49
+65,Hermanos Gallo S.L.,retail,pyme,Galicia,2023-04-15,comercial directo,60,0.73
+66,Minería TVGI S.L.N.E,retail,pyme,Canarias,2023-11-22,partner,30,1.0
+67,Farmaceútica Revilla S.A.,seguros,pyme,Galicia,2023-11-02,partner,30,0.95
+68,Requena & Asociados S.C.P,retail,pyme,Galicia,2022-11-19,comercial directo,30,0.67
+69,Restauración SL S.L.L.,peajes,corporate,Comunidad Valenciana,2021-02-22,partner,90,0.12
+70,Pancho Mayoral Goñi S.A.T.,ticketing,pyme,Cataluña,2023-11-09,inbound web,30,0.99
+71,Servicios Internacionales S.C.P,seguros,corporate,Galicia,2022-11-23,partner,90,0.38
+72,Inmobiliaria HUZ S.Coop.,retail,pyme,Aragón,2023-09-04,partner,30,0.74
+73,Familia Julián S.A.,retail,pyme,Madrid,2021-03-17,inbound web,30,0.76
+74,Banco Camps y asociados S.Com.,banca,corporate,Aragón,2021-12-23,comercial directo,90,0.35
+75,Rubio & Asociados S.Com.,retail,corporate,País Vasco,2021-09-18,inbound web,60,0.11
+76,Infraestructuras Castellana S.L.,inmobiliario,corporate,Galicia,2021-11-11,comercial directo,60,0.16
+77,Grupo Pascual S.Com.,seguros,corporate,Cataluña,2022-01-12,comercial directo,60,0.14
+78,Mir & Asociados S.L.,seguros,pyme,Castilla y León,2021-09-06,inbound web,30,1.04
+79,Inversiones Real y asociados S.Com.,banca,pyme,Cataluña,2023-12-24,referido,30,1.13
+80,Desarrollo Feliu y asociados S.L.,banca,pyme,Andalucía,2021-05-29,referido,60,1.04
+81,Dávila y Mascaró S.Com.,retail,pyme,Castilla-La Mancha,2021-10-13,comercial directo,60,0.68
+82,Hermanos Madrid S.A.T.,retail,pyme,Madrid,2021-10-14,referido,30,0.82
+83,Sola y asociados S.Com.,construcción,pyme,País Vasco,2022-10-28,licitación pública,30,1.36
+84,Tecnologías Iberia S.L.,retail,corporate,Galicia,2021-08-08,inbound web,60,0.16
+85,Manufacturas Bueno & Asociados S.L.,ticketing,corporate,Cataluña,2022-11-09,referido,60,0.18
+86,Finanzas Globales S.A.,peajes,corporate,Andalucía,2023-11-09,partner,60,0.31
+87,Tecnologías Española S.Coop.,seguros,pyme,Comunidad Valenciana,2021-04-12,referido,60,1.29
+88,Restauración del Sur S.Com.,banca,pyme,Castilla y León,2023-04-20,referido,30,0.65
+89,Alimentación Campillo S.L.,sector público,corporate,Canarias,2023-09-12,licitación pública,60,0.12
+90,Farmaceútica del Norte S.A.,sector público,pyme,Aragón,2022-02-20,licitación pública,30,1.09
+91,Consultoría del Norte S.A.,seguros,corporate,Cataluña,2023-04-21,comercial directo,90,0.11
+92,Guadalupe Molins Salas S.Coop.,seguros,pyme,Madrid,2021-06-06,comercial directo,30,1.36
+93,Salmerón y Cuenca S.L.,seguros,pyme,Madrid,2022-09-03,comercial directo,30,1.03
+94,Vinicio Jove Huertas S.L.L.,peajes,pyme,Galicia,2023-12-28,comercial directo,60,1.29
+95,Transportes Haro y asociados S.Com.,inmobiliario,pyme,Cataluña,2021-02-23,inbound web,30,1.37
+96,Industrias Llabrés y asociados S.Com.,seguros,pyme,Andalucía,2022-06-17,licitación pública,30,1.05
+97,Desarrollo MK S.L.,seguros,pyme,Aragón,2023-03-20,comercial directo,30,1.42
+98,Soluciones RYD S.L.L.,construcción,corporate,Aragón,2021-12-21,licitación pública,60,0.24
+99,Aller y Pintor S.Coop.,retail,corporate,Aragón,2022-05-30,comercial directo,90,0.34
+100,Martín y asociados S.L.L.,peajes,pyme,Andalucía,2023-11-30,inbound web,60,0.91
+101,Giménez y Torrents S.A.T.,inmobiliario,pyme,Castilla y León,2021-09-22,licitación pública,30,1.05
+102,Torralba y Andres S.Com.,retail,pyme,Castilla y León,2022-10-19,comercial directo,60,1.08
+103,Dalmau y Solsona S.L.N.E,retail,corporate,Cataluña,2021-11-26,licitación pública,90,0.38
+104,Hnos Amores S.A.,retail,pyme,Galicia,2021-04-26,partner,30,0.96
+105,Cerdá y Serrano S.A.,construcción,pyme,Galicia,2022-03-04,inbound web,30,1.43
+106,Restauración Morán & Asociados S.Coop.,retail,pyme,Comunidad Valenciana,2021-12-27,comercial directo,30,1.17
+107,Pinilla y asociados S.L.,retail,pyme,Castilla-La Mancha,2023-03-29,licitación pública,60,0.76
+108,Iniesta y Bilbao S.Coop.,retail,corporate,Castilla y León,2023-04-16,licitación pública,60,0.38
+109,Hermanos Gomez S.L.,retail,corporate,Galicia,2022-10-04,referido,90,0.14
+110,Familia Huertas S.A.D,inmobiliario,pyme,Castilla-La Mancha,2021-06-12,inbound web,30,0.62
+111,Grupo Gómez S.A.,seguros,pyme,Castilla-La Mancha,2022-06-07,referido,30,1.43
+112,Fábrica KNI S.Coop.,ticketing,corporate,Galicia,2022-12-16,partner,60,0.24
+113,Distribuciones FBQ S.L.,ticketing,pyme,Andalucía,2021-08-31,comercial directo,30,0.88
+114,Puente y Fiol S.A.,sector público,pyme,Castilla-La Mancha,2021-06-11,comercial directo,30,1.14
+115,Construcción Inteligentes S.L.L.,retail,corporate,Castilla-La Mancha,2021-04-18,referido,90,0.18
+116,Banco BID S.L.,construcción,pyme,Canarias,2023-02-08,comercial directo,30,0.85
+117,Hnos Trillo S.A.,inmobiliario,pyme,Cataluña,2021-11-15,partner,30,1.23
+118,Segura & Asociados S.Com.,retail,pyme,País Vasco,2022-03-26,licitación pública,30,1.17
+119,Tecnologías Sola y asociados S.L.L.,sector público,pyme,Canarias,2022-08-28,referido,30,1.48
+120,Logística Higueras & Asociados S.C.P,construcción,pyme,Galicia,2022-10-24,referido,30,1.16

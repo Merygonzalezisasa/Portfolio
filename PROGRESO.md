@@ -40,6 +40,21 @@
   (`[Net.ServicePointManager]::SecurityProtocol = Tls12`). En Python con `requests` no aplica.
 - El "python OK" de la terminal era el alias stub de Microsoft Store, no un Python real.
 
+### Fase 1 — ETL 🚧
+- [x] Paso 1 — Generador sintético (`generate_facturas_data.py`). Verificado dos veces
+  (por mí y por Rosmary en su máquina, mismo resultado gracias a SEED=42): dim_tiempo 912,
+  dim_cliente 120, dim_servicio 25, fact_facturas 15.000 (13.444 cobradas, 989 pendientes,
+  567 vencidas). Las 5 correlaciones de FICHA.md §2.3 confirmadas por separado (ver nota abajo).
+- [ ] Paso 2 — Extractor de las 4 APIs (dim_contexto_macro real)  ← ACÁ VAMOS
+- [ ] Paso 3 — Carga a Postgres con upsert
+- [ ] Paso 4 — Verificación de carga
+
+## Notas técnicas importantes
+- **Al medir el retraso de pago, usar siempre `fecha_cobro − fecha_vencimiento` (retraso sobre
+  lo PACTADO), nunca `fecha_cobro − fecha_emision` en bruto.** El `dso_pactado` (30 pyme vs
+  60-90 corporate) es un factor de confusión que invierte el signo de la correlación con el
+  Euríbor si se mide mal. Aplica igual en la Fase 2 (vistas SQL de aging/DSO) y la Fase 4.
+
 ## Dudas abiertas
 - ¿El forward fill del fin de semana (EUR/USD) puede sesgar la correlación? → revisar en la Fase 4
   y declararlo en el notebook.
