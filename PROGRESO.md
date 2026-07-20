@@ -50,8 +50,13 @@
   1.277 filas (2023-01 a 2026-06), feriados_es 130 filas, validación OK sin errores.
   Valores plausibles: Euríbor 2,08-4,16%, IPC 1,5-6%, EUR/USD 1,02-1,20.
   `01_etl/documentacion_api.txt` completado con las 4 APIs.
-- [ ] Paso 3 — Carga a Postgres con upsert  ← ACÁ VAMOS
-- [ ] Paso 4 — Verificación de carga
+- [x] Paso 3 — Carga a Postgres (`load_to_postgres.py`), con upsert real
+  (`INSERT ... ON CONFLICT DO UPDATE`, no `INSERT` ciego). Adelantamos
+  `02_sql/01_create_schema.sql` (esquema estrella con PKs/FKs/índices/comentarios) porque
+  la carga lo necesita como prerrequisito técnico. Verificado: carga completa 912/120/25/
+  1.277/15.000 filas (CSV = tabla en las 5); segunda corrida da los mismos conteos
+  (idempotente); `--tabla dim_contexto_macro` recarga solo esa tabla. 0 FKs huérfanas.
+- [ ] Paso 4 — Verificación de carga (verificar_carga.py)  ← ACÁ VAMOS
 
 ## Notas técnicas importantes
 - **Al medir el retraso de pago, usar siempre `fecha_cobro − fecha_vencimiento` (retraso sobre
