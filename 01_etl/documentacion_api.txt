@@ -1,2 +1,52 @@
-TODO Fase 1: notas de las 4 APIs (endpoints probados en FICHA.md §2.1,
-formatos de fecha, trampas conocidas: epoch ms del INE, findes de Frankfurter).
+Documentación de las 4 APIs — Finance Analytics España
+========================================================
+
+1. BCE (Euríbor 12M) — fuente principal (FICHA.md §2.1)
+---------------------------------------------------------
+Endpoint: https://data-api.ecb.europa.eu/service/data/FM/M.U2.EUR.RT.MM.EURIBOR1YD_.HSTA
+          ?format=jsondata&startPeriod=YYYY-MM
+Formato: SDMX-JSON. La estructura es profunda:
+  dataSets[0].series["<clave>"].observations = {"0": [valor, ...], "1": [...], ...}
+  structure.dimensions.observation[0].values = [{"id": "2024-01"}, {"id": "2024-02"}, ...]
+El índice numérico de "observations" (0, 1, 2...) es la POSICIÓN en la lista de
+"values", no el mes directamente — hay que cruzar ambos para saber a qué mes
+corresponde cada observación.
+Frecuencia: mensual. No requiere key.
+
+2. INE (IPC, serie Tempus) — secundaria
+-----------------------------------------
+Endpoint: https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?nult=N
+Formato: JSON con Data: [{"Fecha": epoch_ms, "Anyo": 2025, "FK_Periodo": 10, "Valor": 3.1}, ...]
+TRAMPA: "Fecha" viene en epoch milisegundos y es AMBIGUO por huso horario (el
+mismo timestamp puede caer en dos días distintos según la zona con la que se
+interprete). Los campos "Anyo" + "FK_Periodo" (mes, 1-12) identifican el
+período sin ambigüedad — se usan esos, no "Fecha".
+Frecuencia: mensual. No requiere key.
+
+3. Frankfurter (EUR/USD) — secundaria
+----------------------------------------
+Endpoint: https://api.frankfurter.app/{inicio}..{fin}?from=EUR&to=USD
+Formato: JSON con rates: {"2026-06-01": {"USD": 1.1646}, ...}
+TRAMPA: omite los días en que el mercado de divisas no opera (fines de semana
+y feriados de mercado) — no rellena, directamente no aparece la fecha. El
+forward fill hay que hacerlo en nuestro ETL, porque el negocio sí emite y
+cobra facturas cualquier día del calendario.
+Frecuencia: diaria (días hábiles). No requiere key.
+
+4. Nager.Date (feriados de España) — plan B global
+-----------------------------------------------------
+Endpoint: https://date.nager.at/api/v3/PublicHolidays/{año}/ES
+Formato: JSON, lista de objetos con "date", "localName", "global" (bool) y
+"counties" (lista de códigos ISO de comunidad autónoma si el feriado NO es
+nacional, p. ej. "ES-AN" para Andalucía; null si es nacional).
+Frecuencia: por fecha, un año a la vez (hay que pedir año por año).
+No requiere key.
+
+Notas generales
+-----------------
+- Todas las peticiones necesitan truststore.inject_into_ssl() en esta
+  máquina: hay inspección TLS (antivirus/proxy) que rompe la verificación de
+  certificados de la librería requests si no se usa el almacén de Windows.
+  Ver SETUP.md para el detalle completo.
+- Rango usado: 2023-01-01 a 2026-06-30 (1 año de margen antes del negocio,
+  que arranca 2024-01, para dar contexto de "antes y después" en el notebook).

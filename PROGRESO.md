@@ -45,8 +45,12 @@
   (por mí y por Rosmary en su máquina, mismo resultado gracias a SEED=42): dim_tiempo 912,
   dim_cliente 120, dim_servicio 25, fact_facturas 15.000 (13.444 cobradas, 989 pendientes,
   567 vencidas). Las 5 correlaciones de FICHA.md §2.3 confirmadas por separado (ver nota abajo).
-- [ ] Paso 2 — Extractor de las 4 APIs (dim_contexto_macro real)  ← ACÁ VAMOS
-- [ ] Paso 3 — Carga a Postgres con upsert
+- [x] Paso 2 — Extractor oficial (`extract_contexto_macro.py`), con reintentos, log y
+  validación de rangos. Verificado por mí y por Rosmary (mismo resultado): dim_contexto_macro
+  1.277 filas (2023-01 a 2026-06), feriados_es 130 filas, validación OK sin errores.
+  Valores plausibles: Euríbor 2,08-4,16%, IPC 1,5-6%, EUR/USD 1,02-1,20.
+  `01_etl/documentacion_api.txt` completado con las 4 APIs.
+- [ ] Paso 3 — Carga a Postgres con upsert  ← ACÁ VAMOS
 - [ ] Paso 4 — Verificación de carga
 
 ## Notas técnicas importantes
